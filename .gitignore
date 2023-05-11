@@ -1,0 +1,16 @@
+myenv/
+*/__pycache__/
+*/.DS_Store
+*/*.pyc
+*/*.pyo
+*/*.pyd
+*/*.sqlite3
+*/*.env
+*/*.log
+*/*.pyc
+*/*.pyo
+*/node_modules/
+*/.DS_Store
+*/build/
+*/*.log
+*/.env*
