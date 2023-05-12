@@ -1,5 +1,9 @@
 myenv/
-*/__pycache__/
+portfolio_backend/personal_portfolio/__pycache__/
+portfolio_backend/personal_portfolio/migrations/__pycache__/
+portfolio_backend/portfolio_backend/__pycache__/
+portfolio_backend/portfolio_backend/__pycache__/settings.cpython-310.pyc
+*/*/__pycache__/
 */.DS_Store
 */*.pyc
 */*.pyo
