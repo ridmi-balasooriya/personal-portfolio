@@ -1,0 +1,112 @@
+{
+    "personal_info": {
+        "name": "Ridmi Balasooriya",
+        "title": "Full Stack Engineer",
+        "image" : "ridmi-balasooriya.jpg"
+    },        
+    "contact_details": {
+            "address": "Dubai, UAE",
+            "email": "ridmi.bizy@gmail.com",
+            "contact_no": "971 58 990 8538"
+        },
+    "social_media": {
+            "linkedin": "www.linkedin.com/in/ridmi-balasooriya-58177242",
+            "github": "https://github.com/ridmi-balasooriya",
+            "website": ""
+    },
+    "working_experiance": [
+        {
+            "title": "Web Master",
+            "company": "Ekwa Marketing",
+            "start_date": "2017-06-01",
+            "end_date": "2021-05-31",
+            "skills": [
+                "JavaScript", "HTML", "CSS", "PHP", "jQuery", "AJAX", "Web Development", "Photoshop", "WordPress", "Mobile Web Design", "Bootstrap", "Front-end Development", "Web Application Development"
+            ],
+            "projects": []
+        },
+        {
+            "title": "Manager Patient Forms and Product Marketing",
+            "company": "Ekwa Marketing",
+            "start_date": "2016-04-01",
+            "end_date": "2017-05-31",
+            "skills": [
+                "JavaScript", "HTML", "CSS", "PHP", "jQuery", "Web forms"
+            ],
+            "projects": []
+        },
+        {
+            "title": "Technical Engineer",
+            "company": "Ekwa Marketing",
+            "start_date": "2012-12-01",
+            "end_date": "2016-03-31",
+            "skills": [
+                "JavaScript", "HTML", "CSS", "PHP", "jQuery", "Web forms"
+            ],
+            "projects": []
+        }
+    ],
+    "education_qualification": [
+        {
+            "school": "University College Dublin",
+            "degree": "Bachelor of Science (B.Sc.)",
+            "field": "Computer Science",
+            "grade": "Second Class First Grade",
+            "end_date": "2015"
+        },
+        {
+            "school": "Sri Lanka Institute of Information Technology",
+            "degree": "Professional Certificate",
+            "field": "Php and MySql",
+            "grade": "Second Class First Grade",
+            "end_date": "2013"
+        },
+        {
+            "school": "National Institute of Business Management",
+            "degree": "Advance Diploma in Computer Based Information Systems",
+            "field": "Computer Science",
+            "grade": "",
+            "end_date": "2012"
+        },
+        {
+            "school": "National Institute of Business Management",
+            "degree": "Diploma in Computer System design",
+            "field": "Computer Science",
+            "grade": "Distinction",
+            "end_date": "2011"
+        }
+    ],
+    "skills": [
+        {"skill_name": "HTML", "status": 80 },
+        {"skill_name": "CSS", "status": 80 },
+        {"skill_name": "JavaScript", "status": 80 },
+        {"skill_name": "Ajax", "status": 80 },
+        {"skill_name": "Python", "status": 50 },
+        {"skill_name": "Django", "status": 50 },
+        {"skill_name": "ReactJs", "status": 50 },
+        {"skill_name": "Bootstrap", "status": 70 },
+        {"skill_name": "ECMAScript", "status": 70 },
+        {"skill_name": "NodeJS", "status": 30 },
+        {"skill_name": "ExpressJS", "status": 30 },
+        {"skill_name": "RESTful API", "status": 40 },
+        {"skill_name": "GIT/GIT Hub", "status": 50 },
+        {"skill_name": "AWS", "status": 20 },
+        {"skill_name": "MongoDB", "status": 30 },
+        {"skill_name": "PostgreSQL/MySQL", "status": 30  },
+        {"skill_name": "Docker", "status": 5 },
+        {"skill_name": "Kubernetes", "status": 5 }
+    ],
+    "soft_skills": [
+        {"skill_name": "Communication", "status": 90 },
+        {"skill_name": "Problem-solving", "status": 90  },
+        {"skill_name": "Adaptability", "status": 90 },
+        {"skill_name": "Time management", "status": 90 },
+        {"skill_name": "Teamwork and collaboration", "status": 90  },
+        {"skill_name": "Attention to detail", "status": 90  },
+        {"skill_name": "Continuous learning", "status": 90  },
+        {"skill_name": "Empathy", "status": 90  }
+    ],    
+    "personal_projects": [
+
+    ]
+}
