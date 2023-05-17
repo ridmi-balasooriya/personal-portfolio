@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../static/css/home.css';
-import PersonalData from './PotfolioComponents/PersonalData';
+import PersonalData from './PortfolioComponents/PersonalData';
 
 const HomePage = () => {
 
