@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
-import '../static/css/home.css';
+import '../styles/home.css';
 import PersonalData from './PortfolioComponents/PersonalData';
 
 const HomePage = () => {
 
     const [pPortfolio, setpPortfolio] = useState();
     let personalInfo = {};
-    let contactDetails = {};
-    let socialMedia = {};
-    let workingExperiance = [];
-    let educationQualification = [];
-    let skills = [];
-    let softSkills = [];
-    let personalProjects = [];
+    // let contactDetails = {};
+    // let socialMedia = {};
+    // let workingExperiance = [];
+    // let educationQualification = [];
+    // let skills = [];
+    // let softSkills = [];
+    // let personalProjects = [];
 
 
     useEffect(() => {
@@ -26,18 +26,20 @@ const HomePage = () => {
     
     if(pPortfolio){        
         personalInfo = pPortfolio.portfolio.personal_info;
-        contactDetails = pPortfolio.portfolio.contact_details;
-        socialMedia = pPortfolio.portfolio.social_media;
-        workingExperiance = pPortfolio.portfolio.working_experiance;
-        educationQualification = pPortfolio.portfolio.educational_qualification;
-        skills = pPortfolio.portfolio.skills;
-        softSkills = pPortfolio.portfolio.soft_skills;
-        personalProjects = pPortfolio.portfolio.personal_projects
+        // contactDetails = pPortfolio.portfolio.contact_details;
+        // socialMedia = pPortfolio.portfolio.social_media;
+        // workingExperiance = pPortfolio.portfolio.working_experiance;
+        // educationQualification = pPortfolio.portfolio.educational_qualification;
+        // skills = pPortfolio.portfolio.skills;
+        // softSkills = pPortfolio.portfolio.soft_skills;
+        // personalProjects = pPortfolio.portfolio.personal_projects
     }
     
     
     return (
-        <PersonalData data = {personalInfo}  />
+        <div className="bg-black">
+            <PersonalData data = {personalInfo}  />
+        </div>
     );
 }
 
