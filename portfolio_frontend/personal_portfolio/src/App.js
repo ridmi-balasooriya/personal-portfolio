@@ -1,18 +1,14 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import HomePage from './pages/HomePage';
 
-function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/data/')
-    .then(response => response.json())
-    .then(data => setMessage(data.message))
-  }, [])
+function App() {  
   return (
-    <div>
-      <h1>{message}</h1>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+        </Routes>
+      </BrowserRouter> 
   );
 }
 
