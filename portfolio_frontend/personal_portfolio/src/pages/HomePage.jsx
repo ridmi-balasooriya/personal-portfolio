@@ -1,17 +1,21 @@
 import { useState, useEffect } from 'react';
 import '../styles/home.css';
 import PersonalData from './PortfolioComponents/PersonalData';
+import WorkingExperiance from './PortfolioComponents/WorkingExperiance';
+import EducationQualification from './PortfolioComponents/EducationQualification';
+import TechSkills from './PortfolioComponents/TechSkills';
+import SoftSkills from './PortfolioComponents/SoftSkills';
 
 const HomePage = () => {
 
     const [pPortfolio, setpPortfolio] = useState();
     let personalInfo = {};
-    // let contactDetails = {};
-    // let socialMedia = {};
-    // let workingExperiance = [];
-    // let educationQualification = [];
-    // let skills = [];
-    // let softSkills = [];
+    //let contactDetails = {};
+    let socialMedia = {};
+    let workingExperiance = [];
+    let educationQualification = [];
+    let techSkills = [];
+    let softSkills = [];
     // let personalProjects = [];
 
 
@@ -26,19 +30,22 @@ const HomePage = () => {
     
     if(pPortfolio){        
         personalInfo = pPortfolio.portfolio.personal_info;
-        // contactDetails = pPortfolio.portfolio.contact_details;
-        // socialMedia = pPortfolio.portfolio.social_media;
-        // workingExperiance = pPortfolio.portfolio.working_experiance;
-        // educationQualification = pPortfolio.portfolio.educational_qualification;
-        // skills = pPortfolio.portfolio.skills;
-        // softSkills = pPortfolio.portfolio.soft_skills;
+        //contactDetails = pPortfolio.portfolio.contact_details;
+        socialMedia = pPortfolio.portfolio.social_media;
+        workingExperiance = pPortfolio.portfolio.working_experiance;
+        educationQualification = pPortfolio.portfolio.education_qualification;
+        techSkills = pPortfolio.portfolio.tech_skills;
+        softSkills = pPortfolio.portfolio.soft_skills;
         // personalProjects = pPortfolio.portfolio.personal_projects
     }
-    
-    
+
     return (
-        <div className="bg-black">
-            <PersonalData data = {personalInfo}  />
+        <div className="main_div py-8">
+            <PersonalData pInfo = {personalInfo} sMedia = {socialMedia}  />  
+            <WorkingExperiance workExp = {workingExperiance} />
+            <EducationQualification eduQual = {educationQualification} />
+            <TechSkills techSkills = {techSkills} />
+            <SoftSkills softSkills = {softSkills} />
         </div>
     );
 }

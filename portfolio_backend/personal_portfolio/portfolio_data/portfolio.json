@@ -2,18 +2,31 @@
     "personal_info": {
         "name": "Ridmi Balasooriya",
         "title": "Full Stack Engineer",
-        "image" : "ridmi-balasooriya.jpg"
+        "image" : "ridmi-balasooriya.png",
+        "summary": "I am a self-motivated and creative problem-solver with a positive can-do attitude. I am always eager to learn new skills and take on new challenges to advance my career. As a proactive team player with strong communication skills, I am dedicated to contributing to the success of any team I work with."
     },        
     "contact_details": {
             "address": "Dubai, UAE",
             "email": "ridmi.bizy@gmail.com",
             "contact_no": "971 58 990 8538"
         },
-    "social_media": {
-            "linkedin": "www.linkedin.com/in/ridmi-balasooriya-58177242",
-            "github": "https://github.com/ridmi-balasooriya",
-            "website": ""
-    },
+    "social_media": [
+        {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/ridmi-balasooriya-58177242",
+            "icon": "linkedIn_logo.png"
+        },
+        {
+            "name": "GitHub",
+            "link": "https://github.com/ridmi-balasooriya",
+            "icon": "github_logo.png"
+        },
+        {
+            "name": "Website",
+            "link": "",
+            "icon": ""
+        }
+    ],    
     "working_experiance": [
         {
             "title": "Web Master",
@@ -21,7 +34,7 @@
             "start_date": "2017-06-01",
             "end_date": "2021-05-31",
             "skills": [
-                "JavaScript", "HTML", "CSS", "PHP", "jQuery", "AJAX", "Web Development", "Photoshop", "WordPress", "Mobile Web Design", "Bootstrap", "Front-end Development", "Web Application Development"
+                "Web Development", "JavaScript", "HTML", "CSS", "PHP", "jQuery", "AJAX", "Photoshop", "WordPress", "Mobile Web Design", "Bootstrap" 
             ],
             "projects": []
         },
@@ -44,7 +57,7 @@
                 "JavaScript", "HTML", "CSS", "PHP", "jQuery", "Web forms"
             ],
             "projects": []
-        }
+        }     
     ],
     "education_qualification": [
         {
@@ -58,7 +71,7 @@
             "school": "Sri Lanka Institute of Information Technology",
             "degree": "Professional Certificate",
             "field": "Php and MySql",
-            "grade": "Second Class First Grade",
+            "grade": "",
             "end_date": "2013"
         },
         {
@@ -76,7 +89,7 @@
             "end_date": "2011"
         }
     ],
-    "skills": [
+    "tech_skills": [
         {"skill_name": "HTML", "status": 80 },
         {"skill_name": "CSS", "status": 80 },
         {"skill_name": "JavaScript", "status": 80 },

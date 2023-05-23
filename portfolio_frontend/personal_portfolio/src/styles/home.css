@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+@import 'tailwindcss/components';
+@layer components{
+    body{
+        @apply
+        font-light
+        text-gray-100        
+        tracking-wide
+        bg-fixed
+        h-screen
+        text-lg
+    }
+    h1, h2, h3, h4, h5, h6{   
+        @apply 
+        text-gray-100;        
+    }
+    h1{
+        @apply 
+        lg:text-5xl
+        md:text-5xl
+        text-4xl
+        font-medium
+        py-2;        
+    }
+    h2{
+        @apply
+        text-3xl
+        py-2;
+    }
+    h3{
+        @apply 
+        text-3xl
+        py-2;
+    }
+}
+
+body{
+    font-family: 'Oswald', sans-serif; 
+    background-image:url('../../public/images/background_img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(closest-side, transparent 79%, transparent 80% 100%),
+        conic-gradient(rgb(143, 143, 143) var(--progress), rgba(0, 0, 0, 0.077) 0);    
+
+}
