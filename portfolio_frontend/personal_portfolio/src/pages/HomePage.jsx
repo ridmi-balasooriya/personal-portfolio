@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../styles/home.css';
+import NavigationBar from './NavigationBar';
 import PersonalData from './PortfolioComponents/PersonalData';
 import WorkingExperiance from './PortfolioComponents/WorkingExperiance';
 import EducationQualification from './PortfolioComponents/EducationQualification';
@@ -39,14 +40,22 @@ const HomePage = () => {
         // personalProjects = pPortfolio.portfolio.personal_projects
     }
 
+    const [visibileID, setVisibleID] = useState('');
+
+    const displaySection = (id) => {
+        setVisibleID(id)
+    }
+
+  
     return (
-        <div className="main_div py-8">
-            <PersonalData pInfo = {personalInfo} sMedia = {socialMedia}  />  
-            <WorkingExperiance workExp = {workingExperiance} />
-            <EducationQualification eduQual = {educationQualification} />
-            <TechSkills techSkills = {techSkills} />
-            <SoftSkills softSkills = {softSkills} />
-        </div>
+        <main className="pb-18">
+            <NavigationBar displaySection = {displaySection} />     
+            {(visibileID === '' || visibileID === 'profile') && <PersonalData pInfo = {personalInfo} sMedia = {socialMedia}  /> } 
+            {(visibileID === '' || visibileID === 'experiance') &&  <WorkingExperiance workExp = {workingExperiance} /> } 
+            {(visibileID === '' || visibileID === 'education') &&  <EducationQualification eduQual = {educationQualification} /> } 
+            {(visibileID === '' || visibileID === 'techSkills') &&  <TechSkills techSkills = {techSkills} /> } 
+            {(visibileID === '' || visibileID === 'softSkills') &&  <SoftSkills softSkills = {softSkills} /> }    
+        </main>
     );
 }
 

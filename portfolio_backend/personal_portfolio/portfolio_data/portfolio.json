@@ -114,7 +114,8 @@
         {"skill_name": "Problem-solving", "status": 90  },
         {"skill_name": "Adaptability", "status": 90 },
         {"skill_name": "Time management", "status": 90 },
-        {"skill_name": "Teamwork and collaboration", "status": 90  },
+        {"skill_name": "Teamwork", "status": 90  },
+        {"skill_name": "Collaboration", "status": 90  },
         {"skill_name": "Attention to detail", "status": 90  },
         {"skill_name": "Continuous learning", "status": 90  },
         {"skill_name": "Empathy", "status": 90  }

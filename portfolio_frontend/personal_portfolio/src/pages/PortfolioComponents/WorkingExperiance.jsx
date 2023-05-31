@@ -2,7 +2,7 @@ const WorkingExperiance = (props) => {
     const workExp = props.workExp
 
     return(
-        <section id='workExp' className="portfolio_section px-10 lg:px-40 pt-24 text-center">
+        <section id='experiance' className="portfolio_section px-10 lg:px-40 pt-24 text-center show">
             <h2>Working Experiance</h2>
             <div className="workexpdiv grid grid-cols-3 gap-4 gap-4 place-content-center my-10">
                 {
