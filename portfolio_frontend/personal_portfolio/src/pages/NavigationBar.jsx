@@ -1,13 +1,45 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const NavigationBar = ({ displaySection }) => {
+const NavigationBar = () => {
     const [isActive, setIsActive] = useState(1);
 
     const handleClick = (linkId, compId) =>  {
-        
+        const id = document.querySelector(`#${compId}`);
+        const sectionElement = document.querySelectorAll(`main section`);
+        sectionElement.forEach( section => {
+            section.removeAttribute('style');
+        })
+        id.style.height = '100vh';
+        id.scrollIntoView({behavior: 'auto'})        
         setIsActive(linkId);
-        displaySection(compId)
     }
+    
+    useEffect(() => {
+        const scrollHandler = () => {
+            const sectionElement = document.querySelectorAll('main section');
+
+            for (let i = 0; i < sectionElement.length; i++) {                
+                const section = sectionElement[i];
+                section.removeAttribute('style');
+                const rect = section.getBoundingClientRect();   
+                if (rect.bottom -100 >= 0 && rect.top <= window.innerHeight) {
+                    const sectionId = document.querySelector(`#${section.id}`);
+                    sectionId.style.height = '100vh'
+                    setIsActive(i+1)
+                    break;
+                }
+            }
+        }
+
+        window.addEventListener("scroll", scrollHandler);
+
+        return () => {
+            window.removeEventListener('scroll',scrollHandler);
+          };
+    },[])
+   
+
+    
     
     return(
         <nav className="fixed top-0 right-0 w-full bg-black opacity-70 text-right">
@@ -38,6 +70,10 @@ const NavigationBar = ({ displaySection }) => {
                 </li>
                 <li className={isActive === 5 ? 'active' : ''}>
                     <a href="#softSkills" className={isActive === 5 ? 'active' : ''} onClick={(event) =>{event.preventDefault(); handleClick(5, 'softSkills')}}>Soft Skills</a>
+                    <span className="pointer"></span>
+                </li>
+                <li className={isActive === 6 ? 'active' : ''}>
+                    <a href="#contactDetails" className={isActive === 6 ? 'active' : ''} onClick={(event) =>{event.preventDefault(); handleClick(6, 'contactDetails')}}>Contact</a>
                     <span className="pointer"></span>
                 </li>
             </ul>

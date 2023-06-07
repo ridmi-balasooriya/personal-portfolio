@@ -52,8 +52,17 @@
     nav li:hover, nav li.active, nav li a:hover, nav li a.active{
         @apply
         bg-gray-300
-
         text-black
+    }
+    .contact_form input, .contact_form textarea{
+        @apply
+        mx-auto
+        my-2
+        p-2
+        w-96
+        bg-opacity-50 
+        rounded-2xl
+        text-black        
     }
 }
 
@@ -124,4 +133,3 @@ nav li.active .pointer, nav li:hover .pointer{
     display: block;
     border-bottom: 15px solid #d1d1d1;
 }
-

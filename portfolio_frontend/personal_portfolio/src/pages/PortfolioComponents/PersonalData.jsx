@@ -2,7 +2,7 @@ const PersonalData = (props) => {
     const { pInfo, sMedia } = props;
     
     return (
-        <section id='profile' className="portfolio_section px-10 lg:px-40 pt-24 text-center show">
+        <section id='profile' className="portfolio_section px-10 lg:px-40 pt-24 text-center">
             <div className="w-60 inline-block m-auto">
                 <img src={`images/${pInfo.image}`} alt={pInfo.name} className="w-auto" />
             </div>

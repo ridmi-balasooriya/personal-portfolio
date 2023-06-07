@@ -6,12 +6,14 @@ import WorkingExperiance from './PortfolioComponents/WorkingExperiance';
 import EducationQualification from './PortfolioComponents/EducationQualification';
 import TechSkills from './PortfolioComponents/TechSkills';
 import SoftSkills from './PortfolioComponents/SoftSkills';
+import ContactDetails from './PortfolioComponents/ContactDetails';
+import Footer from './Footer';
 
 const HomePage = () => {
 
     const [pPortfolio, setpPortfolio] = useState();
     let personalInfo = {};
-    //let contactDetails = {};
+    let contactDetails = {};
     let socialMedia = {};
     let workingExperiance = [];
     let educationQualification = [];
@@ -31,7 +33,7 @@ const HomePage = () => {
     
     if(pPortfolio){        
         personalInfo = pPortfolio.portfolio.personal_info;
-        //contactDetails = pPortfolio.portfolio.contact_details;
+        contactDetails = pPortfolio.portfolio.contact_details;
         socialMedia = pPortfolio.portfolio.social_media;
         workingExperiance = pPortfolio.portfolio.working_experiance;
         educationQualification = pPortfolio.portfolio.education_qualification;
@@ -39,22 +41,17 @@ const HomePage = () => {
         softSkills = pPortfolio.portfolio.soft_skills;
         // personalProjects = pPortfolio.portfolio.personal_projects
     }
-
-    const [visibileID, setVisibleID] = useState('');
-
-    const displaySection = (id) => {
-        setVisibleID(id)
-    }
-
   
     return (
         <main className="pb-18">
-            <NavigationBar displaySection = {displaySection} />     
-            {(visibileID === '' || visibileID === 'profile') && <PersonalData pInfo = {personalInfo} sMedia = {socialMedia}  /> } 
-            {(visibileID === '' || visibileID === 'experiance') &&  <WorkingExperiance workExp = {workingExperiance} /> } 
-            {(visibileID === '' || visibileID === 'education') &&  <EducationQualification eduQual = {educationQualification} /> } 
-            {(visibileID === '' || visibileID === 'techSkills') &&  <TechSkills techSkills = {techSkills} /> } 
-            {(visibileID === '' || visibileID === 'softSkills') &&  <SoftSkills softSkills = {softSkills} /> }    
+            <NavigationBar />     
+            <PersonalData pInfo = {personalInfo} sMedia = {socialMedia}  />
+            <WorkingExperiance workExp = {workingExperiance} />
+            <EducationQualification eduQual = {educationQualification} />
+            <TechSkills techSkills = {techSkills} />
+            <SoftSkills softSkills = {softSkills} />
+            <ContactDetails contactDetails = {contactDetails} />   
+            {/* <Footer /> */}
         </main>
     );
 }

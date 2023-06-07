@@ -2,7 +2,7 @@ const EducationQualification = (props) => {
     const eduQual = props.eduQual
 
     return(
-        <section id='education' className="portfolio_section px-10 lg:px-40 pt-24 text-center show">
+        <section id='education' className="portfolio_section px-10 lg:px-40 pt-24 text-center">
             <h2>Educational Qualification</h2>
             <div className="eduqualdiv grid grid-cols-4 gap-4 gap-4 place-content-center my-10">
                 {
