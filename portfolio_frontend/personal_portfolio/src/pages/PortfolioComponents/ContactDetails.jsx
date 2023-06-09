@@ -73,7 +73,7 @@ const ContactDetails = (props) => {
                         </div>
                         <button type='submit'onClick={handleSubmission} className='bg-black bg-opacity-80 rounded-2xl text-white inline-block mx-auto my-2 p-2 w-96 border-gray-300 hover:bg-gray-300 hover:text-black'>Send Message</button>
                     </form>
-                }   
+                }                   
             </div>            
         </section>
     );

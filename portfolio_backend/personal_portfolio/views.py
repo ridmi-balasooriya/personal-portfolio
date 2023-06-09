@@ -2,8 +2,10 @@ import json
 import os
 from django.middleware.csrf import get_token
 from django.views.decorators.csrf import csrf_exempt
-from django.shortcuts import render
+from django.core.mail import send_mail
+from django.conf import settings
 from django.http import JsonResponse
+
 
 
 def home(request):
@@ -27,7 +29,14 @@ def sendmessage(request):
         email = request.POST.get('email')
         yourmessage = request.POST.get('message')
         csrftoken = request.POST.get('csrftoken')
-        message = f"Thank you for sending a message {name}. I will reach to you soon.!"
-        return JsonResponse({'message': message})
+
+        subject = f'Email From: {name} - {email} '
+        body = f"From: {name} - {email} \n\n{yourmessage}\n\n{name}\n{email}"
+        to_email = ['ridmi.portfolio@gmail.com']
+        responsMessage = f"Thank you for sending a message {name} .\n\n I will reach to you soon.!"
+
+        send_mail(subject, body, settings.EMAIL_HOST_USER, to_email)
+
+        return JsonResponse({'message': responsMessage})
     else:
         return JsonResponse({'error': 'Invalid Request Method'}, status = 400)
