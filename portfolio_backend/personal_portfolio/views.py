@@ -33,7 +33,7 @@ def sendmessage(request):
         subject = f'Email From: {name} - {email} '
         body = f"From: {name} - {email} \n\n{yourmessage}\n\n{name}\n{email}"
         to_email = ['ridmi.portfolio@gmail.com']
-        responsMessage = f"Thank you for sending a message {name} .\n\n I will reach to you soon.!"
+        responsMessage = f"Thank you for sending a message {name}."
 
         send_mail(subject, body, settings.EMAIL_HOST_USER, to_email)
 

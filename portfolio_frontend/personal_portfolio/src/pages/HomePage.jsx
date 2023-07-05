@@ -13,7 +13,7 @@ const HomePage = () => {
 
     const [pPortfolio, setpPortfolio] = useState();
     let personalInfo = {};
-    let contactDetails = {};
+    let contactD = {};
     let socialMedia = {};
     let workingExperiance = [];
     let educationQualification = [];
@@ -33,7 +33,7 @@ const HomePage = () => {
     
     if(pPortfolio){        
         personalInfo = pPortfolio.portfolio.personal_info;
-        contactDetails = pPortfolio.portfolio.contact_details;
+        contactD = pPortfolio.portfolio.contact_details;
         socialMedia = pPortfolio.portfolio.social_media;
         workingExperiance = pPortfolio.portfolio.working_experiance;
         educationQualification = pPortfolio.portfolio.education_qualification;
@@ -50,7 +50,7 @@ const HomePage = () => {
             <EducationQualification eduQual = {educationQualification} />
             <TechSkills techSkills = {techSkills} />
             <SoftSkills softSkills = {softSkills} />
-            <ContactDetails contactDetails = {contactDetails} />   
+            <ContactDetails contactD = {contactD} sMedia = {socialMedia} />   
             {/* <Footer /> */}
         </main>
     );
