@@ -7,7 +7,7 @@ import EducationQualification from './PortfolioComponents/EducationQualification
 import TechSkills from './PortfolioComponents/TechSkills';
 import SoftSkills from './PortfolioComponents/SoftSkills';
 import ContactDetails from './PortfolioComponents/ContactDetails';
-import Footer from './Footer';
+//import Footer from './Footer';
 
 const HomePage = () => {
 
@@ -41,18 +41,74 @@ const HomePage = () => {
         softSkills = pPortfolio.portfolio.soft_skills;
         // personalProjects = pPortfolio.portfolio.personal_projects
     }
-  
+    const [screenSize, setScreenSize] = useState('');
+    const [mainContent, setMainContent] = useState('');
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+            if(width < 650){
+                setScreenSize('small');
+                setMainContent('#profile');
+            }else if(width >= 650 && width < 880){
+                setScreenSize('medium');
+                setMainContent('#profile');
+            }else{
+                setScreenSize('large');
+                setMainContent('#experiance');
+            }
+        }
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, [])
+
+
+    
+    const [isVisible, setIsVisible] = useState(false);
+
+    //Load main Content
+    const loadContent = (event) => {
+        event.preventDefault()
+        setMainContent('');
+        setIsVisible(true);
+        const linkElement = event.currentTarget;
+        const href = linkElement.getAttribute('href');
+       
+        setTimeout(() => {    
+            setMainContent(href);
+            setIsVisible(false);            
+        }, 2000);
+
+        
+        
+    }
+
     return (
-        <main className="pb-18">
-            <NavigationBar />     
-            <PersonalData pInfo = {personalInfo} sMedia = {socialMedia}  />
-            <WorkingExperiance workExp = {workingExperiance} />
-            <EducationQualification eduQual = {educationQualification} />
-            <TechSkills techSkills = {techSkills} />
-            <SoftSkills softSkills = {softSkills} />
-            <ContactDetails contactD = {contactD} sMedia = {socialMedia} />   
-            {/* <Footer /> */}
-        </main>
+        <>
+            <section className='navigation'>
+                <NavigationBar loadContent = {loadContent} />
+            </section>   
+            <main>   
+                
+                {isVisible && <div className='preloader_div'>
+                    <div className="preloader"><div></div><div></div><div></div></div>
+                </div>}                
+                {(screenSize !== 'large') && (mainContent === '#profile')? <PersonalData pInfo = {personalInfo} sMedia = {socialMedia}  />: null  } 
+                {(mainContent === '#experiance') && <WorkingExperiance workExp = {workingExperiance} />}
+                {(mainContent === '#education') && <EducationQualification eduQual = {educationQualification} />}
+                {(mainContent === '#techSkills') && <TechSkills techSkills = {techSkills} />}
+                {(mainContent === '#softSkills') && <SoftSkills softSkills = {softSkills} />}
+                {(mainContent === '#contactDetails') && <ContactDetails contactD = {contactD} sMedia = {socialMedia} /> }  
+                {/* <Footer /> */}
+            </main>  
+            {(screenSize === 'large') && <PersonalData pInfo = {personalInfo} sMedia = {socialMedia}  />  }     
+            
+        </>
+        
     );
 }
 

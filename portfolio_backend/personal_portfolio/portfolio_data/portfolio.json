@@ -57,7 +57,18 @@
                 "JavaScript", "HTML", "CSS", "PHP", "jQuery", "Web forms"
             ],
             "projects": []
-        }     
+        },
+        {
+            "title": "Program Analyst and Instructor",
+            "company": "National Institute of Business Management",
+            "start_date": "2012-08-01",
+            "end_date": "2012-11-30",
+            "skills": [
+                "JavaScript", "HTML", "CSS", "PHP", "jQuery", "Teaching"
+            ],
+            "projects": []
+        }   
+          
     ],
     "education_qualification": [
         {

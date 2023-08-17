@@ -63,7 +63,7 @@ const ContactDetails = (props) => {
     }
 
     return(
-        <section id='contactDetails' className="portfolio_section px-10 lg:px-40 pt-24 pb-40 text-center">
+        <section id='contactDetails' className="portfolio_section px-10 lg:px-40 pt-24 text-center">
             <h2>Contact Me</h2>
             <div className='contact_form max-w-screen-sm mt-6 text-center mx-auto'>
 
@@ -103,7 +103,7 @@ const ContactDetails = (props) => {
                         </div>
                     </div>
                 }    
-                <div className="sm_div flex place-content-center mt-6">
+                {/* <div className="sm_div flex place-content-center mt-6">
                     { Object.entries(sMedia).map(([key, value]) => (
                         value.link &&
                         <div key={key} className="sm w-24 mt-2 mx-3">
@@ -113,7 +113,7 @@ const ContactDetails = (props) => {
                         </div>
                         
                     ))}
-                </div>            
+                </div>             */}
             </div>            
         </section>
     );
