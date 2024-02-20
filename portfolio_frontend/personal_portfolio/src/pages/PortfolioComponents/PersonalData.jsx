@@ -5,7 +5,7 @@ const PersonalData = (props) => {
         <section id='profile' className="portfolio_section text-center">
             <div className="profile-inner-div">
                 <div className="w-60 inline-block m-auto pt-6">
-                    <img src={`images/${pInfo.image}`} alt={pInfo.name} className="w-auto" />
+                    <img src={`images/${pInfo.image}`} alt={pInfo.name} className="potfolio-profile-pic w-auto" />
                 </div>
                 <div className="info_div px-4">
                     <h1 className="inline-block border-b-2">{pInfo.name}</h1>
