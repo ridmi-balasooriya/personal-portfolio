@@ -96,7 +96,21 @@ body{
     justify-content: center
 }
 
-
+.project-div{
+    width: 100%;   
+}
+.read-more{
+    border: thin solid;
+    padding: 3px 15px;
+}
+.flexsblock:nth-child(odd) .read-more:hover{
+    background-color: var(--secondry-color);
+    color: var(--prime-color);
+}
+.flexsblock:nth-child(even) .read-more:hover{
+    background: var(--prime-color);
+    color: var(--secondry-color);
+}
 .flexsblock:nth-child(odd){
     background: var(--prime-color);
     color: var(--secondry-color);
@@ -691,6 +705,9 @@ nav ul li:first-child{
         background: rgb(63 63 63 / 100%) !important;
         color: var(--secondry-color) !important;   
     }
+    .project-div{
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -727,6 +744,9 @@ nav ul li:first-child{
     #techSkills .flexsblockdiv .skilldiv, #softSkills .flexsblockdiv .skilldiv{
         padding: 1.5rem;
     }
+    .project-div{
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1285px) {
@@ -745,6 +765,9 @@ nav ul li:first-child{
     .portfolio_section{
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+    .project-div{
+        width: 100%;
     }
     
 }

@@ -7,6 +7,7 @@ import EducationQualification from './PortfolioComponents/EducationQualification
 import TechSkills from './PortfolioComponents/TechSkills';
 import SoftSkills from './PortfolioComponents/SoftSkills';
 import ContactDetails from './PortfolioComponents/ContactDetails';
+import Projects from './PortfolioComponents/Projects';
 //import Footer from './Footer';
 
 const HomePage = () => {
@@ -19,13 +20,16 @@ const HomePage = () => {
     let educationQualification = [];
     let techSkills = [];
     let softSkills = [];
-    // let personalProjects = [];
+    let projects = [];
 
 
     useEffect(() => {
         fetch('http://127.0.0.1:8000/api/data/')
-        .then(response => response.json())
-        .then(data => setpPortfolio(data))
+        .then(
+            response => response.json()
+        )
+        .then(
+            data => setpPortfolio(data))
         .catch(error => {
             alert(error)
         })
@@ -39,7 +43,7 @@ const HomePage = () => {
         educationQualification = pPortfolio.portfolio.education_qualification;
         techSkills = pPortfolio.portfolio.tech_skills;
         softSkills = pPortfolio.portfolio.soft_skills;
-        // personalProjects = pPortfolio.portfolio.personal_projects
+        projects = pPortfolio.portfolio.projects
     }
     const [screenSize, setScreenSize] = useState('');
     const [mainContent, setMainContent] = useState('');
@@ -102,7 +106,8 @@ const HomePage = () => {
                 {(mainContent === '#education') && <EducationQualification eduQual = {educationQualification} />}
                 {(mainContent === '#techSkills') && <TechSkills techSkills = {techSkills} />}
                 {(mainContent === '#softSkills') && <SoftSkills softSkills = {softSkills} />}
-                {(mainContent === '#contactDetails') && <ContactDetails contactD = {contactD} sMedia = {socialMedia} /> }  
+                {(mainContent === '#contactDetails') && <ContactDetails contactD = {contactD} sMedia = {socialMedia} /> }
+                {(mainContent === '#projects') && <Projects projects = {projects} />}
                 {/* <Footer /> */}
             </main>  
             {(screenSize === 'large') && <PersonalData pInfo = {personalInfo} sMedia = {socialMedia}  />  }     

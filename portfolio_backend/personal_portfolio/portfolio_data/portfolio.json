@@ -131,7 +131,79 @@
         {"skill_name": "Continuous learning", "status": 90  },
         {"skill_name": "Empathy", "status": 90  }
     ],    
-    "personal_projects": [
-
+    "projects": [
+        {
+            "project_name": "Tech Talk - Blog Platform", 
+            "project_description":"This web application is a full-featured blog platform built using a modern technology stack. It allows users to read, create, update, and interact with blog articles. The platform supports user authentication and authorization, enabling users to sign up, log in, and manage their articles and comments. ", 
+            "website":"http://54.73.125.6/",
+            "github":"https://github.com/ridmi-balasooriya/Blog-Platform-Final",
+            "technologies_used":[
+                {
+                    "tech_name":"Frontend: React.js",
+                    "desc":"A dynamic and responsive user interface for an engaging user experience."
+                },
+                {
+                    "tech_name":"Backend: Django",
+                    "desc":"A robust and secure REST API built using Django Rest Framework."
+                },
+                {
+                    "tech_name":"Database: PostgreSQL",
+                    "desc":"A powerful, open-source relational database system."
+                },
+                {
+                    "tech_name":"Storage: AWS S3",
+                    "desc":"Used for storing static and media files."
+                },
+                {
+                    "tech_name":"Database Service: AWS RDS (PostgreSQL)",
+                    "desc":"Managed relational database service for PostgreSQL."
+                },
+                {
+                    "tech_name":"Deployment: AWS Elastic Beanstalk",
+                    "desc":"An easy-to-use service for deploying and scaling web applications and services."
+                }
+            ],
+            "features":[
+                "User Management: Users can sign up, log in, and manage their profiles.",
+                "Article Management: Users can write, update, and delete articles.",
+                "Comments and Likes: Users can comment on and like articles.",
+                "Responsive Design: The platform is designed to work seamlessly on both desktop and mobile devices."
+            ]
+        },
+        {
+            "project_name": "Portfolio Website", 
+            "project_description":"This is a personal portfolio website designed to showcase information about myself, including my professional and educational qualifications, skills, contact details, and projects. The website provides a comprehensive overview of my background and capabilities, serving as a digital resume and contact point for potential clients or employers.", 
+            "website":"http://localhost:3000/",
+            "github":"https://github.com/ridmi-balasooriya/personal-portfolio",
+            "technologies_used":[
+                {
+                    "tech_name":"Frontend: React.js",
+                    "desc":"A dynamic and responsive user interface for an engaging user experience."
+                },
+                {
+                    "tech_name":"Backend: Django",
+                    "desc":"A robust and secure REST API built using Django Rest Framework."
+                },
+                {
+                    "tech_name":"Data Storage: JSON",
+                    "desc":"Data is stored in a JSON file for simplicity and ease of management."
+                },
+                {
+                    "tech_name":"Storage: AWS S3",
+                    "desc":"Used for storing static and media files."
+                },
+                {
+                    "tech_name":"Deployment: AWS Elastic Beanstalk",
+                    "desc":"An easy-to-use service for deploying and scaling web applications and services."
+                }
+            ],
+            "features":[
+                "Professional Overview: Detailed information about my career background, including job roles, responsibilities, and achievements.",
+                "Educational Qualifications: A section dedicated to my academic achievements and relevant certifications.",
+                "Skills: A comprehensive list of my technical skills, tools, and technologies with descriptions of my proficiency in each",
+                "Projects: Showcases of significant projects I've worked on, including descriptions, technologies used, and links to live demos or repositories.",
+                "Contact Information: Provides multiple ways to get in touch with me, including email and social media links."
+            ]
+        }
     ]
 }

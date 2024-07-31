@@ -73,6 +73,14 @@ const NavigationBar = ({loadContent}) => {
                             <span className="material-symbols-outlined hr">horizontal_rule</span>
                         </a>
                         <span className="pointer"></span>
+                    </li>                    
+                    <li className={isActive === 7 ? 'active' : ''}>
+                        <a href="#projects" className={isActive === 7 ? 'active' : ''} onClick={(event) =>{loadContent(event); handleClick(7)}}>
+                            <span className="material-symbols-outlined">important_devices</span>
+                            Projects
+                            <span className="material-symbols-outlined hr">horizontal_rule</span>
+                        </a>
+                        <span className="pointer"></span>
                     </li>
                     <li className={isActive === 3 ? 'active' : ''}>
                         <a href="#education" className={isActive === 3 ? 'active' : ''} onClick={(event) =>{loadContent(event); handleClick(3)}}>
@@ -105,15 +113,7 @@ const NavigationBar = ({loadContent}) => {
                             <span className="material-symbols-outlined hr">horizontal_rule</span>
                         </a>
                         <span className="pointer"></span>
-                    </li>
-                    <li className={isActive === 7 ? 'active' : ''}>
-                        <a href="#projects" className={isActive === 7 ? 'active' : ''} >
-                            <span className="material-symbols-outlined">important_devices</span>
-                            Projects
-                            <span className="material-symbols-outlined hr">horizontal_rule</span>
-                        </a>
-                        <span className="pointer"></span>
-                    </li>
+                    </li>                    
                 </ul>
             </nav>
         </>
