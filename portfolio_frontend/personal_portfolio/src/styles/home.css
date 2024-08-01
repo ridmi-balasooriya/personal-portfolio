@@ -103,6 +103,10 @@ body{
     border: thin solid;
     padding: 3px 15px;
 }
+.validationError{
+    border: thin solid #ffbebe;
+    background-color: #ffd9d9;
+}
 .flexsblock:nth-child(odd) .read-more:hover{
     background-color: var(--secondry-color);
     color: var(--prime-color);
